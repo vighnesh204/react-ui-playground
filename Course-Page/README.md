@@ -10,7 +10,7 @@ A React mini project built to practice core React concepts like API integration,
 |---|---|
 | ![All](./src/assets/pics/all.png) | ![Design](./src/assets/pics/design.png) |
 
-> Courses are fetched from the **[Dot Batch Student Repo](https://github.com/dot-batch)** API and filtered by category in real time.
+> Courses are fetched from the **[Dot Batch Student Repo]** API and filtered by category in real time.
 
 ---
 
