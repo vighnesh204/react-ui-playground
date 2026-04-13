@@ -1,8 +1,10 @@
-import React from 'react'
+import Card from "./Card"
 
-const Testimonials = () => {
+const Testimonials = ({ animeData }) => {
   return (
-    <div>Testimonials</div>
+    <div>
+        <Card animeData={animeData} />
+    </div>
   )
 }
 
