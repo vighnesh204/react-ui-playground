@@ -1,16 +1,47 @@
-# React + Vite
+<div align="center">
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# 🌀 Anime Testimonials
 
-Currently, two official plugins are available:
+**A sleek testimonial carousel — built to master React fundamentals.**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+<br/>
 
-## React Compiler
+[![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://react.dev/)
+[![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-0F172A?style=for-the-badge&logo=tailwind-css&logoColor=38BDF8)](https://tailwindcss.com/)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+</div>
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ✦ Overview
+
+A mini React project featuring fictional anime character testimonials — crafted as a focused exercise in component architecture, state management, and responsive UI design.
+
+---
+
+## ⚡ Features
+
+- 🎴 &nbsp;Navigate testimonials with **Prev / Next** controls
+- 🎲 &nbsp;**Surprise Me** — jump to a random character instantly
+- 💜 &nbsp;Polished dark UI with smooth transitions
+- 📱 &nbsp;Fully responsive across all screen sizes
+
+---
+
+## 🖼️ Preview
+
+![Anime Testimonials Preview](./src/assets/pics/gojo.png)
+
+---
+
+## 🛠️ Quick Start
+
+```bash
+npm install && npm run dev
+```
+
+---
+
+<div align="center">
+<sub>Built with focus. Powered by curiosity.</sub>
+</div>
