@@ -22,9 +22,9 @@ A mini React project featuring fictional anime character testimonials — crafte
 ## ⚡ Features
 
 - 🎴 &nbsp;Navigate testimonials with **Prev / Next** controls
-- 🎲 &nbsp;**Surprise Me** — jump to a random character instantly
+- 🎲 &nbsp;**Anime** — jump to a random character instantly
 - 💜 &nbsp;Polished dark UI with smooth transitions
-- 📱 &nbsp;Fully responsive across all screen sizes
+
 
 ---
 
