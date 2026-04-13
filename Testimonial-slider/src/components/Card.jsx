@@ -1,5 +1,4 @@
 import { FaQuoteLeft, FaQuoteRight, FaGem } from "react-icons/fa"
-import { FiChevronLeft, FiChevronRight } from "react-icons/fi"
 
 const Card = ({animeData}) => {
     const { id, name, role, image, text} = animeData;

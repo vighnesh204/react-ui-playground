@@ -1,4 +1,6 @@
 import Card from "./Card"
+import { FiChevronLeft, FiChevronRight } from "react-icons/fi"
+
 
 const Testimonials = ({ animeData }) => {
   return (
