@@ -6,7 +6,7 @@ const Card = ({ animeData }) => {
     <div className="flex flex-col md:relative">
       <div className="absolute top-[-7rem] z-[10] mx-auto">
         <img
-          className="aspect-square rounded-full w-[140px] z-25"
+          className="aspect-square rounded-full w-[140px] z-25 object-cover border-4 border-white"
           src={image}
           alt=""
         />
