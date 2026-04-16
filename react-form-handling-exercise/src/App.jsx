@@ -5,7 +5,7 @@ import Form from "./components/Form";
 const App = () => {
   const [users, setUsers] = useState([])
 
-  const handleSubmitData = (data) => {
+  const handleFormSubmitData = (data) => {
     setUsers([...users, data])
   }
 
@@ -13,7 +13,7 @@ const App = () => {
     <div className="w-full min-h-screen bg-zinc-200 flex items-center justify-center">
       <div className="container mx-auto">
         <Cards users={users} />
-        <Form handleSubmitData={handleSubmitData} />
+        <Form handleFormSubmitData={handleFormSubmitData} />
       </div>
     </div>
   );
