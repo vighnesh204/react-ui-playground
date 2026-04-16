@@ -1,11 +1,13 @@
+import { useState } from "react";
 import Cards from "./components/Cards";
 import Form from "./components/Form";
 
 const App = () => {
+  const [users, setUsers] = useState([])
   return (
     <div className="w-full min-h-screen bg-zinc-200 flex items-center justify-center">
-      <div className="container mx-auto px-4">
-        <Cards />
+      <div className="container mx-auto">
+        <Cards users={users} />
         <Form />
       </div>
     </div>
