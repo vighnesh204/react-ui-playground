@@ -56,13 +56,22 @@ const App = () => {
 
   const [animeData, setAnimeData] = useState(data)
 
+  const handleClick = (index) => {
+    setAnimeData((prev) => {
+      return prev.map((item, itemIndex) => {
+        if(itemIndex === index) return {...item, added: !item.added}
+        return item;
+      })
+    })
+  }
+
   return (
     <div className="w-full h-screen bg-zinc-300">
-      <Navbar />
+      <Navbar data={animeData}/>
       <div className="px-14 flex gap-10 mt-10 flex-wrap">
         {
           animeData.map((item, index) => (
-            <Card key={item} id={index} data={item} />
+            <Card key={index} index={index} data={item} handleClick={handleClick}/>
           ))
         }
       </div>
