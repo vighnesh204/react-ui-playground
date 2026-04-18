@@ -64,7 +64,7 @@ A social feed clone to explore **dynamic lists**, **user interactions**, and **c
 
 ---
 
-### 💬 [Testimonial-Slider](./Testimonial-Slider)
+### 💬 [Testimonial-slider](./Testimonial-slider)
 > An auto-playing testimonial/review carousel
 
 A smooth slider component built to understand **timers in React**, **index-based navigation**, and **side effects**.
