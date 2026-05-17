@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 const PasswordGenerator = () => {
   const [password, setPassword] = useState("");
@@ -6,7 +6,7 @@ const PasswordGenerator = () => {
   const [includeNumbers, setIncludeNumbers] = useState(true);
   const [includeCharacters, setIncludeCharacters] = useState(true);
 
-  const generatePassword = () => {
+  const generatePassword = useCallback(() => {
     // Logic to generate password based on selected options
     let chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
     if (includeNumbers) chars += "0123456789";
@@ -18,12 +18,12 @@ const PasswordGenerator = () => {
     }
     setPassword(generatedPassword);
 
-  };
+  }, [length, includeNumbers, includeCharacters]);
 
   useEffect(()=> {
     generatePassword();
 
-  }, [length, includeNumbers, includeCharacters])
+  }, [generatePassword]);
 
 
   return (
@@ -116,11 +116,6 @@ const PasswordGenerator = () => {
             />
           </div> */}
         </div>
-
-        {/* Generate Button */}
-        <button className="w-full bg-green-500 hover:bg-green-400 text-black font-bold py-4 rounded-2xl transition-all duration-300 shadow-lg hover:shadow-green-500/30">
-          Generate Password
-        </button>
       </div>
     </div>
   );
