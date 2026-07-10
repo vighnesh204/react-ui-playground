@@ -1,16 +1,32 @@
-# React + Vite
+# 🔐 OTP Input
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A sleek, auto-focusing OTP (One-Time Password) input component built with React — clean UI, smooth keyboard navigation, and zero external dependencies.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- 🔢 Auto-focus moves to the next box as you type
+- ⌫ Backspace navigates back to the previous box
+- 🚫 Numeric-only input validation
+- 🎯 Auto-focus on the first input when the page loads
+- 🎨 Modern dark-themed UI with smooth focus transitions
 
-## React Compiler
+## 🛠️ Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+[![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://react.dev/)
+[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/docs)
+[![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/guide/)
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📸 Screenshot
+
+![OTP Input Screenshot](./src/assets/pic.png)
+
+
+## 💡 How It Works
+
+Each input box is tracked via a `ref` array. On typing a digit, focus automatically shifts to the next box; on backspace with an empty box, focus shifts back — giving that classic, seamless OTP-entry feel.
+
+---
+
+⭐ If you like this project, consider giving it a star!
