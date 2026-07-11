@@ -1,16 +1,55 @@
-# React + Vite
+# React Accordion
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A minimal, accessible accordion component built with React and Tailwind CSS, using react-icons for the expand/collapse indicators.
 
-Currently, two official plugins are available:
+## Preview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Dark-themed, single-open accordion — clicking an item expands it and collapses any other open item.
 
-## React Compiler
+## Screenshot
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+![Accordion Screenshot](.\src\assets\accordion.png)
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+[![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://react.dev/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/docs)
+[![React Icons](https://img.shields.io/badge/React_Icons-E91E63?style=for-the-badge&logo=react&logoColor=white)](https://react-icons.github.io/react-icons/)
+[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+
+## Installation
+
+```bash
+npm install react-icons
+```
+
+Tailwind CSS must already be configured in your project ([setup guide](https://tailwindcss.com/docs/installation)).
+
+## Usage
+
+```jsx
+import Accordion from './components/Accordion';
+
+const data = [
+  { title: "Components", description: "Reusable building blocks used to create React user interfaces." },
+  { title: "Props", description: "Used to pass data from a parent component to a child component." },
+];
+
+const App = () => <Accordion data={data} />;
+
+export default App;
+```
+
+## Props
+
+| Prop | Type | Description |
+|------|------|-------------|
+| `data` | `Array<{ title: string, description: string }>` | List of accordion items to render |
+
+## Features
+
+- Single-item-open behavior (opening one closes the others)
+- Smooth hover states and dark UI styling
+- Chevron icon toggles between up/down on open/close
+- Graceful fallback message when `data` is empty or undefined
+
