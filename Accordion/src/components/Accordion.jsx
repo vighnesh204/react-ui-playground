@@ -8,7 +8,7 @@ const Accordion = ({ data }) => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
-  return (
+  return !data || (data.length === 0) ? "No items available" : (
     <div className="min-h-screen w-full bg-black px-4 py-20">
       <div className="mx-auto w-full max-w-2xl space-y-3">
         {data.map((item, index) => {
