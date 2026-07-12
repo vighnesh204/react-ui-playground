@@ -7,7 +7,7 @@ const App = () => {
 
   const [showResults, setShowResults] = useState(false);
 
-  const [cache, setCache] = uCeState({});
+  const [cache, setCache] = useState({});
 
   const fetchData = async () => {
 
