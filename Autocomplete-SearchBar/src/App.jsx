@@ -5,6 +5,8 @@ const App = () => {
 
   const [results, setResults] = useState([]);
 
+  const [showResults, setShowResults] = useState(false);
+
   const fetchData = async () => {
     const data = await fetch(`https://dummyjson.com/products/search?q=${input}`);
     const json = await data.json();
@@ -24,9 +26,11 @@ const App = () => {
           className="w-full px-5 py-3 border border-gray-300 rounded-full shadow-sm outline-none focus:border-blue-500 focus:ring-blue-200 text-lg"
           value={input}
           onChange={(e) => setInput(e.target.value)}
+          onFocus={()=> setShowResults(true)}
+          onBlur={()=> setShowResults(false)}
         />
 
-         <div className="res-container absolute top-16 left-0 mt-2 w-full bg-white border border-gray-200 rounded-2xl shadow-xl max-h-96 overflow-y-auto z-50">
+        { showResults && <div className="res-container absolute top-16 left-0 mt-2 w-full bg-white border border-gray-200 rounded-2xl shadow-xl max-h-96 overflow-y-auto z-50">
         {results.map((result) => (
           <span
             key={result.id}
@@ -35,7 +39,7 @@ const App = () => {
             {result.title}
           </span>
         ))}
-      </div>
+      </div>}
       </div>
      
     </div>
