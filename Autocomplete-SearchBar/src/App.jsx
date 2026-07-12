@@ -15,7 +15,11 @@ const App = () => {
   };
 
   useEffect(() => {
-    fetchData();
+    const timer = setTimeout(fetchData, 300);
+
+    return ()=> {
+      clearTimeout(timer)
+    }
   }, [input]);
 
   return (
