@@ -1,9 +1,45 @@
-import React from 'react'
+import React, { useEffect, useState } from "react";
 
 const App = () => {
-  return (
-    <div>App</div>
-  )
-}
+  const [input, setInput] = useState("");
 
-export default App
+  const [results, setResults] = useState([]);
+
+  const fetchData = async () => {
+    const data = await fetch(`https://dummyjson.com/products/search?q=${input}`);
+    const json = await data.json();
+    setResults(json?.products);
+    // console.log(json?.products)
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, [input]);
+
+  return (
+    <div className="flex justify-center mt-20">
+      <div className="w-full max-w-xl relative">
+        <input
+          type="text"
+          className="w-full px-5 py-3 border border-gray-300 rounded-full shadow-sm outline-none focus:border-blue-500 focus:ring-blue-200 text-lg"
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+        />
+
+         <div className="res-container absolute top-16 left-0 mt-2 w-full bg-white border border-gray-200 rounded-2xl shadow-xl max-h-96 overflow-y-auto z-50">
+        {results.map((result) => (
+          <span
+            key={result.id}
+            className="flex items-center gap-3 px-5 py-2 cursor-pointer hover:bg-gray-50 trasition duration-150"
+          >
+            {result.title}
+          </span>
+        ))}
+      </div>
+      </div>
+     
+    </div>
+  );
+};
+
+export default App;
